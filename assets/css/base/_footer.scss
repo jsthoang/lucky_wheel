@@ -1,0 +1,259 @@
+#footer {
+    background-color: $clr-bg;
+    .inner {
+        background-color: $clr-base;
+        border-radius: 50px 50px 0 0;
+        padding-bottom: 92px;
+        @include pc {
+            border-radius: get_pc(50) get_pc(50) 0 0;
+            padding-bottom: get_pc(92);
+        }
+        @include sp {
+            border-radius: get_sp(30) get_sp(30) 0 0;
+            padding-bottom: get_sp(85);
+        }
+        .content {
+            padding-top: 82px;
+            max-width: 920px;
+            margin: 0 auto;
+            @include pc {
+                padding-top: get_pc(82);
+                max-width: get_pc(920);
+            }
+            @include min_pc {
+                padding-top: get_min_pc(88);
+                max-width: get_min_pc(682);
+            }
+            @include sp {
+                padding-top: get_sp(50);
+                max-width: get_sp(350);
+            }
+        }
+        .address {
+            display: flex;
+            margin-bottom: 40px;
+            @include pc {
+                margin-bottom: get_pc(40);
+            }
+            @include min_pc {
+
+            }
+            @include sp {
+                display: block;
+            }
+            .caerux_lab {
+                width: 410px;
+                flex-shrink: 0;
+                margin-right: 101px;
+                position: relative;
+                @include pc {
+                    width: get_pc(410);
+                    margin-right: get_pc(101);
+                }
+                @include min_pc {
+                    width: get_min_pc(303);
+                    margin-right: get_min_pc(76);
+                }
+                @include sp {
+                    width: 100%;
+                    margin-right: unset;
+                }
+                &:after {
+                    content: "";
+                    width: 458px;
+                    height: 1px;
+                    left: 0;
+                    position: absolute;
+                    background-color: $clr-ovr;
+                    @include pc {
+                        width: get_pc(458);
+                        height: get_pc(1);
+                    }
+                    @include min_pc {
+                        width: get_min_pc(340);
+                        height: get_min_pc(1);
+                    }
+                    @include sp {
+                        width: get_sp(166);
+                        height: get_sp(1);
+                        bottom: get_sp(-230);
+                    }
+                }
+                .thumb {
+                    width: 198.5px;
+                    height: 50px;
+                    @include pc {
+                        width: get_pc(198.5);
+                        height: get_pc(50);
+                    }
+                    @include min_pc {
+                        width: get_min_pc(159);
+                        height: get_min_pc(40);
+                        margin-bottom: get_min_pc(20);
+                    }
+                    @include sp {
+                        width: get_sp(119);
+                        height: get_sp(30);
+                        margin-bottom: get_sp(15);
+                    }
+                }
+                h3 {
+                    font-size: 21px;
+                    line-height: 31px;
+                    letter-spacing: 1.05px;
+                    margin-bottom: 15px;
+                    font-weight: bold;
+                    text-align: left;
+                    @include pc {
+                        font-size: get_pc(21);
+                        line-height: get_pc(31);
+                        letter-spacing: get_pc(1.05);
+                        margin-bottom: get_pc(15);
+                    }
+                    @include min_pc {
+                        font-size: get_min_pc(21);
+                        line-height: get_min_pc(31);
+                        letter-spacing: get_min_pc(1.05);
+                        margin-bottom: get_min_pc(10);
+                    }
+                    @include sp {
+                        font-size: get_sp(16);
+                        line-height: get_sp(19);
+                        letter-spacing: get_sp(0.8);
+                        margin-bottom: get_sp(10);
+                    }
+                }
+                p {
+                    font-size: 19px;
+                    line-height: 31px;
+                    letter-spacing: 0.95px;
+                    margin-bottom: 40px;
+                    font-weight: 500;
+                    text-align: left;
+                    color: $clr-black;
+                    @include pc {
+                        font-size: get_pc(19);
+                        line-height: get_pc(31);
+                        letter-spacing: get_pc(0.95);
+                        margin-bottom: get_pc(40);
+                    }
+                    @include min_pc {
+                        font-size: get_min_pc(17);
+                        line-height: get_min_pc(29);
+                        letter-spacing: get_min_pc(0.85);
+                        margin-bottom: get_min_pc(37);
+                    }
+                    @include sp {
+                        font-size: get_sp(12);
+                        line-height: get_sp(20);
+                        letter-spacing: get_sp(0.6);
+                        margin-bottom: get_sp(35);
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+            }
+            .caeruX {
+                @include sp {
+                    margin-bottom: get_sp(69);
+                }
+                .thumb {
+                    width: 198px;
+                    height: 50px;
+                    margin-bottom: 25px;
+                    @include pc {
+                        width: get_pc(198);
+                        height: get_pc(50);
+                        margin-bottom: get_pc(25);
+                    }
+                    @include min_pc {
+                        width: get_min_pc(158);
+                        height: get_min_pc(40);
+                        margin-bottom: get_min_pc(20);
+                    }
+                    @include sp {
+                        width: get_sp(119);
+                        height: get_sp(30);
+                        margin-bottom: get_sp(15);
+                    }
+                }
+                h3 {
+                    font-size: 21px;
+                    line-height: 31px;
+                    letter-spacing: 1.05px;
+                    margin-bottom: 15px;
+                    font-weight: bold;
+                    text-align: left;
+                    @include pc {
+                        font-size: get_pc(21);
+                        line-height: get_pc(31);
+                        letter-spacing: get_pc(1.05);
+                        margin-bottom: get_pc(15);
+                    }
+                    @include min_pc {
+                        font-size: get_min_pc(21);
+                        line-height: get_min_pc(31);
+                        letter-spacing: get_min_pc(1.05);
+                        margin-bottom: get_pc(10);
+                    }
+                    @include sp {
+                        font-size: get_sp(16);
+                        line-height: get_sp(19);
+                        letter-spacing: get_sp(0.8);
+                        margin-bottom: get_sp(10);
+                    }
+                }
+                p {
+                    font-size: 19px;
+                    line-height: 31px;
+                    letter-spacing: 0.95px;
+                    margin-bottom: 40px;
+                    font-weight: 500;
+                    text-align: left;
+                    color: $clr-black;
+                    @include pc {
+                        font-size: get_pc(19);
+                        line-height: get_pc(31);
+                        letter-spacing: get_pc(0.95);
+                        margin-bottom: get_pc(40);
+                    }
+                    @include min_pc {
+                        font-size: get_min_pc(17);
+                        line-height: get_min_pc(29);
+                        letter-spacing: get_min_pc(0.85);
+                        margin-bottom: get_min_pc(37);
+                    }
+                    @include sp {
+                        font-size: get_sp(12);
+                        line-height: get_sp(20);
+                        letter-spacing: get_sp(0.6);
+                        margin-bottom: get_sp(35);
+                    }
+                }
+            }
+        }
+        .copy_right {
+            font-size: 16px;
+            line-height: 31px;
+            letter-spacing: 0.8px;
+            text-align: left;
+            color: $clr-ovr;
+            @include pc {
+                font-size: get_pc(16);
+                line-height: get_pc(31);
+                letter-spacing: get_pc(0.8);
+            }
+            @include min_pc {
+                font-size: get_min_pc(14);
+                line-height: get_min_pc(31);
+                letter-spacing: get_min_pc(0.7);
+            }
+            @include sp {
+                font-size: get_sp(10);
+                line-height: get_sp(11);
+                letter-spacing: get_sp(0.5);
+            }
+        }
+    }
+}

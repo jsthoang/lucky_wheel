@@ -1,0 +1,73 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+@mixin formclear {
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+@mixin bgsetup($bgimage: '', $bgrepeat: '', $bgposi: '', $bgsize: '') {
+    @if $bgimage != '' {
+        background-image: url($bgimage);
+    }
+    @if $bgrepeat != '' {
+        background-repeat: $bgrepeat;
+    }
+    @if $bgposi != '' {
+        background-position: $bgposi;
+    }
+    @if $bgsize != '' {
+        background-size: $bgsize;
+    }
+}
+
+@mixin pc { //pc
+    @media only screen and (max-width: ($breakpoint-large)) and (min-width: ($breakpoint-pc)) {
+        @content;
+    }
+}
+
+@mixin min_pc { //sp
+    @media only screen and (max-width: ($breakpoint-min-pc-1)) and (min-width: ($breakpoint-min-pc-2)) {
+        @content;
+    }
+}
+
+@mixin sp { //sp
+    @media (max-width: ($breakpoint-md)) {
+        @content;
+    }
+}
+
+@function get_pc($fsize, $viewport:1920) {
+    $rate: 100 / $viewport;
+    @return $rate * $fsize * 1vw;
+}
+
+@function get_min_pc($fsize, $viewport:768) {
+    $rate: 100 / $viewport;
+    @return $rate * $fsize * 1vw;
+}
+
+@function get_sp($fsize, $viewport:390) {
+    $rate: 100 / $viewport;
+    @return $rate * $fsize * 1vw;
+}
+
+
+/* text clamp */
+@mixin txtClamp($clamp: '') {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $clamp;
+}

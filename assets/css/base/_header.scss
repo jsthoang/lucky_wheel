@@ -1,0 +1,371 @@
+//#header {
+//	.inner {
+//		position: fixed;
+//		display: flex;
+//		justify-content: space-between;
+//		padding: 20px 140px;
+//		background-color: $clr-base;
+//		box-shadow: 0px 3px 6px $clr-boxshadow;
+//		width: 100%;
+//		z-index: 99;
+//		@include sp {
+//			padding: get_sp(13) get_sp(135);
+//		}
+//		.thumb {
+//			width: 170px;
+//			@include sp {
+//				width: get_sp(119);
+//			}
+//		}
+//		.nav_menu {
+//			display: flex;
+//			align-items: center;
+//			@include sp {
+//				display: none;
+//			}
+//			ul {
+//				display: flex;
+//				align-items: center;
+//				li {
+//					padding: 0 20px;
+//					border-right: 1px solid $clr-black;
+//					a {
+//						font-size: 19px;
+//						line-height: 22px;
+//						letter-spacing: 0.95px;
+//						display: block;
+//						color: $clr-text-menu;
+//						@include pc {
+//							font-size: get_pc(19);
+//							line-height: get_pc(22);
+//							letter-spacing: get_pc(0.95);
+//						}
+//					}
+//					&:last-child {
+//						border-right: unset;
+//					}
+//				}
+//			}
+//
+//		}
+//	}
+//}
+/*
+	header
+*/
+.nav_menu_sp {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 30px;
+	color: #ffffff;
+	@include pc {
+		font-size: get_sp(24);
+		line-height: get_sp(30);
+	}
+	@include min_pc {
+		font-size: get_min_pc(24);
+		line-height: get_min_pc(30);
+	}
+	@include sp {
+		font-size: get_sp(24);
+		line-height: get_sp(30);
+	}
+}
+#header {
+	box-shadow: 0 4px 10px 5px rgba(229, 229, 229, 0.25);
+	background-color: #ffffff;
+	position: fixed;
+	margin: 0 auto;
+	width: 100%;
+	top: 0;
+	z-index: 99;
+	&.active_sp{
+		box-shadow: none;
+		.inner{
+			@include min_pc {
+				height: get_min_pc(90);
+			}
+			@include sp {
+				height: get_sp(60);
+				margin-top: get_sp(0);
+			}
+			.logo{
+				display: none;
+			}
+		}
+	}
+	@include pc {
+		box-shadow: 0 get_pc(4) get_pc(4) rgba(207, 206, 205, 0.15);
+	}
+	.inner{
+		padding: 23px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1170px;
+		margin: 0 auto;
+		position: relative;
+		@include pc {
+			padding: get_pc(23) 0;
+			max-width: get_pc(1170);
+		}
+		@include min_pc {
+			padding: get_min_pc(12) 0;
+		}
+		@include sp {
+			padding: get_sp(13) 0;
+			display: block;
+		}
+		.logo{
+			padding-left: 55px;
+			@include pc {
+				padding-left: get_pc(55);
+			}
+			@include min_pc {
+				padding-left: get_min_pc(45);
+			}
+			@include sp {
+				padding: 0;
+			}
+			a {
+				.thumb{
+					width: 181px;
+					@include pc {
+						width: get_pc(181);
+					}
+					@include min_pc{
+						width: get_min_pc(170);
+					}
+					@include sp {
+						width: get_sp(120);
+						height: auto;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+		.nav{
+			margin-right: 6%;
+			ul {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				li {
+					padding: 0 20px;
+					border-right: 1px solid $clr-black;
+					@include pc {
+						padding: 0 get_pc(20);
+					}
+					a {
+						font-size: 19px;
+						line-height: 22px;
+						letter-spacing: 0.95px;
+						display: block;
+						color: $clr-text-menu;
+						@include pc {
+							font-size: get_pc(19);
+							line-height: get_pc(22);
+							letter-spacing: get_pc(0.95);
+						}
+					}
+					&:last-child {
+						border-right: unset;
+					}
+				}
+			}
+		}
+		.dot_nav {
+			@include sp {
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: get_sp(29);
+				width: get_sp(32);
+				height: get_sp(32);
+			}
+			@include min_pc {
+				border-radius: 50%;
+				top: 50%;
+				transform: translateY(-50%);
+				right: get_min_pc(29);
+				width: get_min_pc(50);
+				height: get_min_pc(50);
+			}
+		}
+	}
+	.menu_sp {
+		background-color: #19A2FF;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 99;
+		overflow-y: scroll;
+		overscroll-behavior-y: none;
+		visibility: hidden;
+		&.visibility {
+			visibility: visible;
+			animation: fadeIn 0.3s ease-out;
+		}
+		@include sp {
+			padding: get_sp(50) get_sp(40);
+			top: 0;
+		}
+		@include min_pc {
+			padding: get_min_pc(60) get_min_pc(50);
+			top: 0;
+		}
+		.thumb {
+			@include sp {
+				width: get_sp(130);
+				height: get_sp(150);
+				margin: 0 auto get_sp(45);
+			}
+			@include min_pc {
+				width: get_min_pc(130);
+				height: get_min_pc(150);
+				margin: 0 auto get_min_pc(45);
+			}
+		}
+		// mobile open
+		.list_menu {
+			width: 100%;
+			@include sp{
+				margin-top: get_sp(77);
+				margin-bottom: get_sp(16);
+			}
+			@include min_pc{
+				margin-top: get_min_pc(77);
+				margin-bottom: get_min_pc(16);
+			}
+			ul{
+				li {
+					@include sp {
+						text-align: center;
+						margin-bottom: get_sp(40)
+					}
+					@include min_pc {
+						text-align: center;
+						margin-bottom: get_min_pc(40);
+					}
+					a{
+						@extend .nav_menu_sp;
+					}
+				}
+				@include sp {
+					margin-bottom: get_sp(85);
+				}
+			}
+		}
+	}
+}
+.dot_nav {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.4s linear;
+	align-items: center;
+	overflow: hidden;
+	z-index: -999;
+	@include pc {
+		position: absolute;
+	}
+	@include min_pc {
+		height: get_min_pc(40);
+		width: get_min_pc(40);
+		background-color: #19A2FF;
+		z-index: 999;
+	}
+	@include sp {
+		height: get_sp(32);
+		width: get_sp(32);
+		background-color: #19A2FF;
+		z-index: 999;
+	}
+	.menu {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include sp {
+			width: get_sp(25);
+			height: get_sp(32);
+		}
+		@include min_pc {
+			width: get_min_pc(35);
+			height: get_min_pc(40);
+		}
+		.line {
+			position: absolute;
+			height: 2px;
+			width: 18px;
+			border-radius: 1px;
+			background-color: #ffffff;
+			transition: all 0.4s linear;
+			@include sp {
+				width: get_sp(18);
+				height: get_sp(2);
+				border-radius: get_sp(1);
+			}
+			@include min_pc {
+				width: get_min_pc(30);
+				height: get_min_pc(3);
+				border-radius: get_min_pc(1);
+			}
+			&.one {
+				top: 14px;
+				@include sp {
+					top: get_sp(9);
+				}
+				@include min_pc {
+					top: get_min_pc(8);
+				}
+			}
+			&.three {
+				bottom: 9px;
+				@include sp {
+					bottom: get_sp(9);
+				}
+				@include min_pc {
+					bottom: get_min_pc(8);
+				}
+				@include pc {
+					bottom: get_pc(14);
+				}
+			}
+		}
+
+	}
+	&.active {
+		color: #ffffff;
+		.menu{
+			@include sp {
+				width: get_sp(29);
+				height: get_sp(45);
+			}
+			@include min_pc {
+				width: get_min_pc(40);
+				height: get_min_pc(40);
+			}
+			.line {
+				&.one {
+					top: 50%;
+					transform: translateY(-50%) rotate(45deg);
+					background-color: #ffffff;
+				}
+
+				&.three {
+					bottom: 50%;
+					transform: translateY(50%) rotate(-45deg);
+					background-color: #ffffff;
+				}
+				&.two {
+					opacity: 0;
+				}
+			}
+		}
+
+	}
+}
+

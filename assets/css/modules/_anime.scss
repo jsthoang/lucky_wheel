@@ -1,0 +1,31 @@
+@keyframes move {
+    to { transform: translateX(-100%); }
+}
+@keyframes lightUp {
+    from {
+        background-color: #fff;
+    }
+    to {
+        background-color: #E84D5A;
+    }
+}
+
+@keyframes lightDown {
+    from {
+        background-color: #E84D5A;
+    }
+    to {
+        background-color: #fff;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
