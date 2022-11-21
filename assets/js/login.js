@@ -1,4 +1,4 @@
-var baseUrl = '/';
+var baseUrl = 'http://localhost:3000/';
 
 function addNotification(notification) {
    let textHtmlNotify = [];
